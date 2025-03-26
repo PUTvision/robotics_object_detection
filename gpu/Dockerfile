@@ -39,9 +39,9 @@ RUN mkdir -p /robotics1/src
 WORKDIR /robotics1
 
 RUN mkdir tmp
-RUN git clone https://github.com/PUTvision/robotics_object_detection.git tmp
-RUN mv tmp/part_1_training model_training
-RUN mv tmp/part_2_deploy src/robotics_object_detection
+RUN git clone https://github.com/PUTvision/robotics_object_detection.git tmp/
+RUN mv tmp/robotics_object_detection/part_1_training model_training
+RUN mv tmp/robotics_object_detection/part_2_deploy src/robotics_object_detection
 RUN rm -rf tmp
 
 RUN pip3 install -r model_training/requirements.txt --break-system-packages

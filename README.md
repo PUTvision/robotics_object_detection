@@ -52,6 +52,7 @@ docker run -it \
     --gpus all \
     --env="NVIDIA_VISIBLE_DEVICES=all" \
     --env="NVIDIA_DRIVER_CAPABILITIES=all" \
+    --shm-size=1024m \
     --name="ros2_detection_gpu" \
     ros2_detection_gpu \
     bash
@@ -75,6 +76,7 @@ docker run -it \
     --volume="$XAUTH:$XAUTH" \
     --privileged \
     --network=host \
+    --shm-size=1024m \
     --name="ros2_detection_cpu" \
     ros2_detection_cpu \
     bash

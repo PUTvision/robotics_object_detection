@@ -12,9 +12,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        (os.path.join('share', package_name, 'launch'), glob(os.path.join('launch', '*.launch.py'))), # Add this line
-
-        ('share/' + package_name + '/calibration_results', ['calibration_results/left.yaml', 'calibration_results/right.yaml']),
+        ('share/' + package_name + '/weights', ['weights/yolo11n.pt']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -25,8 +23,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'stereo_publisher = robotics_object_detection.stereo_publisher:main',
-            'stereo_info_publisher = robotics_object_detection.stereo_info_publisher:main',
+            'detect_results_publisher = robotics_object_detection.detect_results_publisher:main',
         ],
     },
 )

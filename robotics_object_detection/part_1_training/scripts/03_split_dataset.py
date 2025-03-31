@@ -26,6 +26,7 @@ def generate_train_val_list(path_to_images: str, val_size: float = 0.2, seed: in
     train_list, val_list = [], []
     
     # TODO: prepare the train and val lists
+    # Note: please do it mannually, do not use sklearn or other libraries
     # 1. shuffle the image list using random.shuffle - note that random.shuffle does not return anything
     # 2. calculate the number of images in the validation set considering the val_size
     # 3. split the image list into train and val lists (train_list and val_list variables)

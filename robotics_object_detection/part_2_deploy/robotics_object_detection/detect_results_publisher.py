@@ -49,7 +49,7 @@ class DetectResultsPublisher(Node):
             task='detect'
             )
         
-        self.device = 'cuda:0' if torch.cuda.is_available() else 'cpu',
+        self.device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
         self.get_logger().info(f'Using device: {self.device}')
         
         self.frame_id = 0

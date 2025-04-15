@@ -36,7 +36,11 @@ fi
 
 * build the container
 ```
+# If your host CUDA driver is 12.5 or newer
 docker build -t ros2_detection_gpu ./gpu/ --no-cache
+
+# Otherwise
+docker build -t ros2_detection_gpu ./gpu_humble/ --no-cache
 ```
 
 * run the container
